@@ -9,17 +9,23 @@
     },
     "modulePaths": [
         "<rootDir>/node_modules",
-        "<rootDir>/src"
+        "<rootDir>/examples",
+        "<rootDir>/src",
+        "<rootDir>/test"
     ],
     "testMatch": [
         "**/?(*.)+(spec|test).[tj]s?(x)"
     ],
     "moduleNameMapper": {
-        "^src/(.*)$": "<rootDir>/src/$1"
+        "^examples/(.*)$": "<rootDir>/examples/$1",
+        "^src/(.*)$": "<rootDir>/src/$1",
+        "^test/(.*)$": "<rootDir>/test/$1"
     },
     "collectCoverage": true,
     "collectCoverageFrom": [
-        "src/**/*.{ts,tsx}"
+        "examples/**/*.{ts,tsx}",
+        "src/**/*.{ts,tsx}",
+        "test/**/*.{ts,tsx}"
     ],
     "coveragePathIgnorePatterns": [
         "<rootDir>/node_modules"
