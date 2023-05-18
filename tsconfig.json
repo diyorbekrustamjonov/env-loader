@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "declaration": true,
+        "declaration": false,
         "removeComments": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
@@ -22,12 +22,19 @@
         ],
         "types": [
             "node",
-            "reflect-metadata"
+            "reflect-metadata",
+            "jest"
         ],
         "paths": {
-            "modules/*": [
-                "src/modules/*"
-            ]
+            "lib/*": [
+                "src/lib/*"
+            ],
+            "examples/*": [
+                "examples/*"
+            ],
+            "test/*": [
+                "test/*"
+            ],
         }
     },
     "include": [
@@ -43,5 +50,5 @@
         "*": [
             "types/*"
         ]
-    }
+    },
 }
